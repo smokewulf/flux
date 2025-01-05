@@ -1,4 +1,4 @@
-torch>=2.0.0
+torch==2.5.1
 torchvision
 einops
 fire>=0.6.0
@@ -10,6 +10,7 @@ tokenizers
 protobuf
 requests
 invisible-watermark
+ruff==0.6.8
 
 [all]
 flux[streamlit]
@@ -20,4 +21,5 @@ gradio
 
 [streamlit]
 streamlit
+streamlit-drawable-canvas
 streamlit-keyup
