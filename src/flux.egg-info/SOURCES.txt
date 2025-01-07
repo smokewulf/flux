@@ -1,6 +1,7 @@
 .gitignore
 LICENSE
 README.md
+api.py
 demo_gr.py
 demo_st.py
 demo_st_fill.py
