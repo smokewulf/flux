@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="../favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet" />
+    
+		<link href="../_app/immutable/assets/0.f2663bb4.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/4.bb21b3bd.css" rel="stylesheet"><title>Python - Documentation - FluxAuth</title><!-- HEAD_svelte-98pwfw_START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-KRM1FPGXGN"></script><script>window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-KRM1FPGXGN');
+  </script><!-- HEAD_svelte-98pwfw_END --><!-- HEAD_svelte-q5f36h_START --><meta name="description" content="Master our API & SDK integration with our comprehensive docs and code examples – access, explore, and integrate FluxAuth."><!-- HEAD_svelte-q5f36h_END --><!-- HEAD_svelte-n6djie_START --><!-- HEAD_svelte-n6djie_END -->
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">
+
+
+
+
+
+
+<div class="fixed top-4 right-4 flex flex-col items-end justify-end gap-2 z-[99999]" id="toasts">
+</div>
+
+
+<div class="max-w-5xl mx-auto p-5"><div class="md:flex justify-between items-center mb-6"><div class="flex items-center gap-6"><a href="/"><h1 class="font-lexend font-bold text-2xl py-0.5">FluxAuth</h1></a>
+      <a href="/" class="link">Home</a>
+      <a href="/contact" class="link">Contact</a>
+      <a href="/panel" class="link">Panel</a></div></div>
+  <div class="flex flex-col md:flex-row gap-4"><div class="group md:w-64 flex-shrink-0 relative"><button class="flex items-center gap-2 md:hidden mb-4 py-2 w-full"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" class="w-4 h-4"><line x1="8" x2="21" y1="6" y2="6"></line><line x1="8" x2="21" y1="12" y2="12"></line><line x1="8" x2="21" y1="18" y2="18"></line><line x1="3" x2="3.01" y1="6" y2="6"></line><line x1="3" x2="3.01" y1="12" y2="12"></line><line x1="3" x2="3.01" y1="18" y2="18"></line></svg>
+        <span>Table of Contents</span></button>
+
+      <nav class="toc absolute md:static md:inline-block top-12 w-full bg-white dark:bg-neutral-900 group-focus-within:inline-block hidden svelte-hyvk40"><a href="/docs/getting-started" style="padding-left: 0.75rem" class="svelte-hyvk40">Getting Started
+          </a><a href="/docs/permissions" style="padding-left: 0.75rem" class="svelte-hyvk40">Permissions
+          </a><a href="/docs/api" style="padding-left: 0.75rem" class="svelte-hyvk40">API
+          </a><a href="/docs/licenses" style="padding-left: 1.25rem" class="svelte-hyvk40">Licenses
+          </a><a href="/docs/variables" style="padding-left: 1.25rem" class="svelte-hyvk40">Variables
+          </a><a href="/docs/client" style="padding-left: 1.25rem" class="svelte-hyvk40">Client
+          </a><a href="/docs/libraries" style="padding-left: 0.75rem" class="svelte-hyvk40">Libraries
+          </a><a href="/docs/cpp" style="padding-left: 1.25rem" class="svelte-hyvk40">C++
+          </a><a href="/docs/csharp" style="padding-left: 1.25rem" class="svelte-hyvk40">C#
+          </a><a href="/docs/python" style="padding-left: 1.25rem" class="svelte-hyvk40 active">Python
+          </a><a href="/docs/go" style="padding-left: 1.25rem" class="svelte-hyvk40">Golang
+          </a><a href="/docs/js" style="padding-left: 1.25rem" class="svelte-hyvk40">JavaScript
+          </a><a href="/docs/php" style="padding-left: 1.25rem" class="svelte-hyvk40">PHP
+          </a></nav></div>
+
+    <div class="prose max-w-none prose-sm prose-p:text-base w-full dark:prose-invert">
+
+<h1>Python</h1>
+<p>The Python library is a single file that can be imported into your project. It is available for Windows, Linux, and macOS.</p>
+<h2>Installation</h2>
+<p>To install the Flux library, simply download the <code>flux.py</code> file and place it in your project directory.</p>
+<h2>Usage</h2>
+<p>To use the Flux library, import the <code>Flux</code> class from the <code>flux</code> module.</p>
+<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">from</span> flux <span class="token keyword">import</span> Flux</code><!-- HTML_TAG_END --></pre>
+<h3>Initialize Flux</h3>
+<p>Create a new instance of the <code>Flux</code> class, providing your application ID as a parameter.</p>
+<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python">flux <span class="token operator">=</span> Flux<span class="token punctuation">(</span><span class="token string">"your_application_id"</span><span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre>
+<h3>Authenticate</h3>
+<p>To authenticate a user, call the <code>authenticate</code> method with the user’s license key and an optional hardware ID.</p>
+<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
+    flux<span class="token punctuation">.</span>authenticate<span class="token punctuation">(</span>license<span class="token punctuation">,</span> hwid<span class="token punctuation">)</span>
+<span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Authentication failed: "</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>message<span class="token punctuation">)</span>
+    <span class="token keyword">return</span></code><!-- HTML_TAG_END --></pre>
+<p>If the authentication is successful, the method will return the string <code>&quot;success&quot;</code>. Otherwise, the method will return <code>&quot;failure&quot;</code>.</p>
+<h3>Get Fields</h3>
+<p>To retrieve a field from the authentication response, use the <code>get_field</code> method, providing the field name and the type of the field.</p>
+<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Expires: "</span><span class="token punctuation">,</span> flux<span class="token punctuation">.</span>get_field<span class="token punctuation">(</span><span class="token string">"expiresAt"</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre>
+<h3>Get Variables</h3>
+<p>To retrieve a variable from the server, use the <code>get_variable</code> method, providing the variable name and the type of the variable.</p>
+<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Authenticated Variable: "</span><span class="token punctuation">,</span> flux<span class="token punctuation">.</span>get_variable<span class="token punctuation">(</span><span class="token string">"str"</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre>
+<h3>Download Variables</h3>
+<p>To download a variable as a file, use the <code>download_variable</code> method, providing the variable name.</p>
+<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python">data <span class="token operator">=</span> flux<span class="token punctuation">.</span>download_variable<span class="token punctuation">(</span><span class="token string">"file"</span><span class="token punctuation">)</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"file.bin"</span><span class="token punctuation">,</span> <span class="token string">"wb"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> out<span class="token punctuation">:</span>
+    out<span class="token punctuation">.</span>write<span class="token punctuation">(</span>data<span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre>
+<p>This method will return the decrypted data of the file. You can then save it to disk or manipulate it as needed.</p>
+<h2>Example</h2>
+<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">from</span> flux <span class="token keyword">import</span> Flux
+
+flux <span class="token operator">=</span> Flux<span class="token punctuation">(</span><span class="token string">"your-application-id"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>flux<span class="token punctuation">.</span>get_variable<span class="token punctuation">(</span><span class="token string">"unauthenticated-variable"</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+license <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Enter license: "</span><span class="token punctuation">)</span>
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    auth <span class="token operator">=</span> flux<span class="token punctuation">.</span>authenticate<span class="token punctuation">(</span>license<span class="token punctuation">,</span> get_hwid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Error: "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    exit<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Expires: "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>flux<span class="token punctuation">.</span>get_field<span class="token punctuation">(</span><span class="token string">"expiresAt"</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Authenticated Variable: "</span> <span class="token operator">+</span> flux<span class="token punctuation">.</span>get_variable<span class="token punctuation">(</span><span class="token string">"secret"</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+data <span class="token operator">=</span> flux<span class="token punctuation">.</span>download_variable<span class="token punctuation">(</span><span class="token string">"file"</span><span class="token punctuation">)</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"file.bin"</span><span class="token punctuation">,</span> <span class="token string">"wb"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> out<span class="token punctuation">:</span>
+    out<span class="token punctuation">.</span>write<span class="token punctuation">(</span>data<span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre></div></div>
+</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_e2g4xk = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.c37129ee.js"),
+						import("../_app/immutable/entry/app.b7a966a4.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4, 19],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>
